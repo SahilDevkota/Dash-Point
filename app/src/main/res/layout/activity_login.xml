@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue"
+    >
+
+
+
+    <LinearLayout
+        android:layout_width="377dp"
+        android:layout_height="615dp"
+        android:layout_gravity="center"
+        android:background="@drawable/rectangle"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50sp"
+            android:fontFamily="serif"
+            android:text="@string/login"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10sp"
+            android:fontFamily="serif"
+            android:text="@string/student_id"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/inputBox"
+            android:layout_width="361dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5sp"
+            android:background="@drawable/input_box"
+            android:hint="@string/enter_student_id"
+            android:textSize="25sp"
+            android:padding="10sp"/>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginTop="20sp"
+            android:layout_marginLeft="10sp"
+            android:fontFamily="serif"
+            android:text="Password"
+            android:textSize="25sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:endIconMode="password_toggle"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordBox"
+                android:layout_width="361dp"
+                android:layout_height="50dp"
+                android:inputType="textPassword"
+                android:background="@drawable/input_box"
+                android:layout_marginLeft="5sp"
+                android:hint="••••••••••••"
+                android:padding="10sp"
+                android:textSize="25sp"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:layout_marginTop="20sp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10sp"
+                android:textSize="17sp"
+                android:fontFamily="serif"
+                android:text="Forgot your password?">
+            </TextView>
+            <TextView
+                android:id="@+id/contactUsText"
+                android:layout_marginLeft="5sp"
+                android:fontFamily="serif"
+                android:textSize="17sp"
+                android:textColor="#FF0000"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Contact us">
+            </TextView>
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Log In"
+            android:textSize="18sp"
+            android:layout_gravity="center">
+        </Button>
+
+        <TextView
+            android:layout_marginLeft="5sp"
+            android:fontFamily="serif"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Copyright © 2023. \nCRICOS Provider No.00124K (Melbourne)
+             \nand CRICOS Provider No. 02475D\n(Sydney and Brisbane)\nRTO Code: 3113">
+        </TextView>
+
+    </LinearLayout>
+
+
+
+
+</FrameLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FinalAssignment</string>
+    <string name="login">Login</string>
+    <string name="enter_student_id">Enter student ID</string>
+    <string name="student_id">Student ID</string>
+    <string name="dashboard">Dashboard</string>
+</resources>
