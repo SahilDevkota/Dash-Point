@@ -8,9 +8,12 @@ import jakarta.inject.Inject
 import retrofit2.Response
 
 
+//Handles dashboard data for the UI
 @HiltViewModel
 class DashboardViewModel @Inject constructor(val dashboardRepository: DashboardRepository) :  ViewModel(){
 
+
+    //Gets dashboard data from the repository
     suspend fun getTheData(keypass : String) : Response<DashboardResponse> {
         return dashboardRepository.getDashboardDetail(keypass)
     }

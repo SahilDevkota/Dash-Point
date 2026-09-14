@@ -11,14 +11,17 @@ import retrofit2.http.POST
 import retrofit2.http.Path
 
 
+// Defines the API endpoint
 interface APIService {
 
+    //Sends login details to the authenticated endpoint
     @POST("/footscray/auth")
     suspend fun login(
         @Body request : LoginRequest
     ): Response<LoginResponse>
 
 
+    //Gets dashboard data by using keypass as a path variable
     @GET("/dashboard/{keypass}")
     suspend fun dashboard(@Path("keypass") keypass:String) : Response<DashboardResponse>
 }

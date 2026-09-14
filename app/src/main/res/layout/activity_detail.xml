@@ -5,19 +5,18 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D6EAF8"
     tools:context=".DetailActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/courseLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="30dp"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
         android:background="@drawable/rectangle"
-        android:layout_marginTop="60dp"
         android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
@@ -26,14 +25,15 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:fontFamily="serif"
-            android:textStyle="bold"
             android:text="Course Details"
             android:textSize="25sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/backButton"
+            android:backgroundTint="#2196F3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -47,9 +47,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:fontFamily="serif"
-            android:textStyle="bold"
             android:text="Course Code"
             android:textSize="25sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/backButton" />
 
@@ -70,9 +70,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:fontFamily="serif"
-            android:textStyle="bold"
             android:text="Course Name"
             android:textSize="25sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/detailCourseCode" />
 
@@ -91,10 +91,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:textStyle="bold"
             android:fontFamily="serif"
             android:text="Course Instructor"
             android:textSize="25sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/detailCourseName" />
 
@@ -115,8 +115,8 @@
             android:layout_marginTop="40dp"
             android:fontFamily="serif"
             android:text="Credit"
-            android:textStyle="bold"
             android:textSize="25sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/courseInstructorDetail" />
 
@@ -136,9 +136,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:fontFamily="serif"
-            android:textStyle="bold"
             android:text="Course Description: "
             android:textSize="25sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/CourseCredit" />
 

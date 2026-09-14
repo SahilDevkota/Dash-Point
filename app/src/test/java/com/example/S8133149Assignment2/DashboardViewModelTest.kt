@@ -21,17 +21,28 @@ import retrofit2.Response
 @OptIn(ExperimentalCoroutinesApi::class)
 class DashboardViewModelTest {
 
+    //Creating an instance
     private lateinit var viewModel: DashboardViewModel
     private lateinit var repository : DashboardRepository
+
+    //Now over here, we're using StandardTestDispatcher. This helps us to control the coroutines during testing
     private val testDispatcher = StandardTestDispatcher()
 
 
     @Before
     fun setup(){
+
+        //Creates a fake repository
         repository = mockk()
+
+        //Replacing the default dispatcher with a testdispatcher
         Dispatchers.setMain(testDispatcher)
+
+        //Creates the view model using the fake repository
         viewModel = DashboardViewModel(repository)
 
+
+        //Defining the fake responses
         coEvery {
             repository.getDashboardDetail(any())
         } returns Response.success(DashboardResponse(entities = listOf(
@@ -54,10 +65,16 @@ class DashboardViewModelTest {
 
     @Test
     fun `getTheData returns successful response` () = runTest(){
+
+        //Calls the viewmodel using the test keypass
         val response = viewModel.getTheData("test-key")
+
+        //Checks that the two entities were returned
         assertEquals(2,response.body()?.entities?.size)
     }
 
+
+    // Resetting the dispatcher
     @After
     fun tearDown(){
         Dispatchers.resetMain()

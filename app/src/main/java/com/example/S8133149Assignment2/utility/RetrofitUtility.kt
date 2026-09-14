@@ -7,19 +7,26 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
+//Utility class for creating the Retrofit client
 class RetrofitUtility {
+
+    //Shows API requests and responses for debugging
     private val logging = HttpLoggingInterceptor().apply {
         level = HttpLoggingInterceptor.Level.BODY
     }
 
+    // Converts JSON to kotlin objects and vice versa
     private val moshi = Moshi.Builder()
         .add(KotlinJsonAdapterFactory())
         .build()
 
+    //Creates the HTTP client
     private val client = OkHttpClient.Builder()
         .addInterceptor(logging)
         .build()
 
+
+    //Creates and configures Retrofit
     fun createRetrofit(baseurl: String) = Retrofit.Builder()
         .baseUrl(baseurl)
         .addConverterFactory(MoshiConverterFactory.create(moshi))
